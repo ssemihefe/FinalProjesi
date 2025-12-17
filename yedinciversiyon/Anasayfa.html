@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Market Sitesi - Anasayfa</title>
+
+  <link rel="stylesheet" href="style2deneme.css">
+    <script>
+    function AdetAzaltma(id){
+      var z = document.getElementById(id);  
+      var mevcutsayi = Number(z.value);
+      
+      if(mevcutsayi > 1)
+    { z.value = mevcutsayi-1;}
+      
+      else if(mevcutsayi <= 10)
+    { document.getElementById('10fazlakapatma').style=(disabled="disabled"); }
+    }
+    function AdetArtirma(id){
+      var z = document.getElementById(id);
+      var mevcutsayi = Number(z.value);
+      if(mevcutsayi < 10)
+    { z.value = mevcutsayi+1; document.getElementById('10fazlakapatma').style;}
+     
+    }
+  document.addEventListener("DOMContentLoaded", () => {
+  const mobileMenu = document.getElementById("mobileMenu");
+  const mobileBtn = document.getElementById("mobileMenuButton");
+
+  mobileBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("open");
+  });
+});
+
+
+/* Eklenecekler: Koyu mod, Search bar (kartların direkt çıkması için),
+Kartların wide screen içinde hizalanması, sepetim'e JS eklenecek,
+Kartlarda 10 üzerine geçince eksiltme butonu devre dışı alma.
+
+
+*/
+
+  </script>
+</head>
+<body>
+
+  <!-- === SIDE MENÜ === -->
+    <div class="side-menu1">
+    <h2> <a href="Anasayfa.html"><img src="img/WebSayfası/LogoDeneme1.png" alt=""> </a></h2>
+    <Button><a href="#">Meyve</a> </Button>
+    <button><a href="">Sebze</a> </button>
+    <button><a href="">İçecek</a> </button>
+    <button><a href="">Atıştırmalık</a> </button>
+    <button><a href=""> Temizlik   </a> </button>
+    <button><a href=""> Şarküteri  </a> </button>
+    <button><a href=""> Deniz Ürünleri   </a> </button>
+    <button><a href=""> Dondurulmuş Ürünler   </a> </button>
+    <button><a href=""> Giyim   </a> </button>
+    <button><a href=""> Elektronik   </a> </button>
+    <button><a href=""> Unlu Mamüller   </a> </button>
+    <button><a href=""> Kozmetik ve Kişisel Bakım   </a> </button>
+    <button><a href=""> Süt ve Süt Ürünleri   </a> </button>
+    <button><a href=""> Bebek   </a> </button>
+    </div>
+
+  <!-- === Body arkasındaki kutu === -->
+    <div class="mainbolge">
+    <!-- === NAV-BAR Mobil sürümde burası sadece logo ve 3 çizgi şeklinde aşağı kayan bir menü eklemeliyiz. === -->
+    <div class="nav-bar">
+      <button> <a href="Anasayfa.html">Ana Sayfa</a> </button>
+      <button><a href="sepetim.html">Sepetim</a> </button>
+      <button><a href="#">Kaynakça</a> </button>
+      <button><a href="#">Giriş yap / Üye Ol </a> </button>
+      <button><a href=""><img src="img/dark.png" id="modeToggle" alt="Koyu Renk/Açık Renk"></a></button> <!-- Bu butonu gece gündüz döngüsü ekleyeceksin chat gpt-->
+      <input type="text" placeholder="Ürün Arayın" id="searchBar">
+      
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+    <h3>Kategoriler</h3>
+    <button>Meyve</button>
+    <button>Sebze</button>
+    <button>İçecek</button>
+    <button>Atıştırmalık</button>
+    <button>Temizlik</button>
+    <button>Şarküteri</button>
+    <button>Deniz Ürünleri</button>
+    <button>Dondurulmuş Ürünler</button>
+    <button>Giyim</button>
+    <button>Elektronik</button>
+    <button>Unlu Mamüller</button>
+    <button>Kozmetik</button>
+    <button>Süt Ürünleri</button>
+    <button>Bebek</button>
+    </div>
+
+    <!-- === KART 1 1.satır === -->
+    <div class="card-container">
+      <div class="kartlar">
+        <img src="img/Meyveler/ananas.jpg" alt="Ürün">
+        <div class="kartlar-content">
+          <h3>Ananas</h3>
+          <p>Taze Tropikal Ananas</p>
+          <button class="karticibutonlar" onclick="AdetAzaltma('Sayi')" id="10fazlakapatma">-</button>
+           <input type="text"  value="1" id="Sayi" disabled="True" style="width: 10%; height: 10%; text-align: center; user-select: none;">
+            <button class="karticibutonlar" onclick="AdetArtirma('Sayi')">+</button>
+           <p>Adet - 10TL</p> 
+          <button>Sepete Ekle</button>
+        </div>
+      </div>
+
+      <!-- === KART 2 === -->
+      <div class="kartlar">
+        <img src="img/Meyveler/armutlar.jpg" alt="Ürün">
+        <div class="kartlar-content">
+          <h3>Armut</h3>
+          <p>Doğal Armut</p>
+          <button class="karticibutonlar" onclick="AdetAzaltma('Sayi1')">-</button>
+           <input type="text"  value="1" id="Sayi1" disabled="True" style="width: 10%; height: 10%; text-align: center; user-select: none;">
+            <button class="karticibutonlar" onclick="AdetArtirma('Sayi1')">+</button>
+           <p>Kg - 10TL</p> 
+          <button>Sepete Ekle</button>
+        </div>
+      </div>
+
+      <!-- === KART 3 === -->
+      <div class="kartlar">
+        <img src="img/Meyveler/elmalar.jpg" alt="Ürün">
+        <div class="kartlar-content">
+          <h3>Elma</h3>
+          <p>Organik Elma</p>
+          <button class="karticibutonlar" onclick="AdetAzaltma('Sayi2')">-</button>
+           <input type="text"  value="1" id="Sayi2" disabled="True" style="width: 10%; height: 10%; text-align: center; user-select: none;">
+            <button class="karticibutonlar" onclick="AdetArtirma('Sayi2')">+</button>
+           <p>Kg - 10TL</p> 
+          <button>Sepete Ekle</button>
+        </div>
+      </div>
+
+      <!-- === KART 4 === -->
+      <div class="kartlar">
+        <img src="img/Meyveler/kivi.jpg" alt="Ürün">
+        <div class="kartlar-content">
+          <h3>Kivi</h3>
+          <p>Taze Kivi</p>
+          <button class="karticibutonlar" onclick="AdetAzaltma('Sayi3')">-</button>
+           <input type="text"  value="1" id="Sayi3" disabled="True" style="width: 10%; height: 10%; text-align: center; user-select: none;">
+            <button class="karticibutonlar" onclick="AdetArtirma('Sayi3')">+</button>
+           <p>Kg - 10TL</p> 
+          <button>Sepete Ekle</button>
+        </div>
+      </div>
+
+      <!-- === KART 5 === -->
+      <div class="kartlar">
+        <img src="img/Meyveler/mandalina.jpg" alt="Ürün">
+        <div class="kartlar-content">
+          <h3>Mandalina</h3>
+          <p>Taze Mandalina</p>
+          <button class="karticibutonlar" onclick="AdetAzaltma('Sayi4')">-</button>
+           <input type="text"  value="1" id="Sayi4" disabled="True" style="width: 10%; height: 10%; text-align: center; user-select: none;">
+            <button class="karticibutonlar" onclick="AdetArtirma('Sayi4')">+</button>
+           <p>Kg - 10TL</p> 
+          <button>Sepete Ekle</button>
+        </div>
+      </div>
+
+    </div>  
+    <!-- === KART 6 2.satır === -->
+    <div class="card-container">
+      <div class="kartlar">
+        <img src="img/Meyveler/muzlar.jpg" alt="Ürün">
+        <div class="kartlar-content">
+          <h3>Muzlar</h3>
+          <p>Taze Muz</p>
+          <button class="karticibutonlar" onclick="AdetAzaltma('Sayi5')">-</button>
+           <input type="text"  value="1" id="Sayi5" disabled="True" style="width: 10%; height: 10%; text-align: center; user-select: none;">
+            <button class="karticibutonlar" onclick="AdetArtirma('Sayi5')">+</button>
+           <p>Kg - 10TL</p> 
+          <button>Sepete Ekle</button>
+        </div>
+      </div>
+
+      <!-- === KART 7 === -->
+      <div class="kartlar">
+        <img src="img/Meyveler/nar.jpg" alt="Ürün">
+        <div class="kartlar-content">
+          <h3>Nar</h3>
+          <p>Doğal Nar</p>
+          <button class="karticibutonlar" onclick="AdetAzaltma('Sayi6')">-</button>
+           <input type="text"  value="1" id="Sayi6" disabled="True" style="width: 10%; height: 10%; text-align: center; user-select: none;">
+            <button class="karticibutonlar" onclick="AdetArtirma('Sayi6')">+</button>
+           <p>Kg - 10TL</p> 
+          <button>Sepete Ekle</button>
+        </div>
+      </div>
+
+      <!-- === KART 8 === -->
+      <div class="kartlar">
+        <img src="img/Meyveler/üzüm.jpg" alt="Ürün">
+        <div class="kartlar-content">
+          <h3>Üzüm</h3>
+          <p>Doğal Üzüm</p>
+          <button class="karticibutonlar" onclick="AdetAzaltma('Sayi7')">-</button>
+           <input type="text"  value="1" id="Sayi7" disabled="True" style="width: 10%; height: 10%; text-align: center; user-select: none;">
+            <button class="karticibutonlar" onclick="AdetArtirma('Sayi7')">+</button>
+           <p>Kg - 10TL</p> 
+          <button>Sepete Ekle</button>
+        </div>
+      </div>
+
+      <!-- === KART 9 === -->
+      <div class="kartlar">
+        <img src="img/Meyveler/şeftali.jpg" alt="Ürün">
+        <div class="kartlar-content">
+          <h3>Şeftali</h3>
+          <p>Taze Şeftali</p>
+          <button class="karticibutonlar" onclick="AdetAzaltma('Sayi8')">-</button>
+           <input type="text"  value="1" id="Sayi8" disabled="True" style="width: 10%; height: 10%; text-align: center; user-select: none;">
+            <button class="karticibutonlar" onclick="AdetArtirma('Sayi8')">+</button>
+           <p>Kg - 10TL</p> 
+          <button>Sepete Ekle</button>
+        </div>
+      </div>
+
+      <!-- === KART 10 === -->
+      <div class="kartlar">
+        <img src="img/Meyveler/Mango.jpg" alt="Ürün">
+        <div class="kartlar-content">
+          <h3>Mango</h3>
+          <p>Doğal Mango</p>
+          <button class="karticibutonlar" onclick="AdetAzaltma('Sayi9')">-</button>
+           <input type="text"  value="1" id="Sayi9" disabled="True" style="width: 10%; height: 10%; text-align: center; user-select: none;">
+            <button class="karticibutonlar" onclick="AdetArtirma('Sayi9')">+</button>
+            <p>Adet - 10TL</p> 
+          <button>Sepete Ekle</button>
+        </div>
+      </div>
+
+          <!-- === KART 11 3.satır === -->
+    
+
+
+
+      
+    </div>
+  </div>
+<script>
+  window.onload = function() {
+  
+      const searchBar = document.getElementById("searchBar");
+      const cards = document.querySelectorAll(".kartlar");
+  
+      searchBar.addEventListener("keyup", function () {
+          const value = searchBar.value.toLowerCase();
+      
+          cards.forEach(card => {
+              const title = card.querySelector("h3").textContent.toLowerCase();
+          
+              if (title.includes(value)) {
+                  card.style.display = "";  // default görünüm
+              } else {
+                  card.style.display = "none";
+              }
+          });
+      });
+    
+  };
+  document.getElementById("modeToggle").addEventListener("click", function(e){
+    e.preventDefault(); // Link tepmesini engeller
+    document.body.classList.toggle("dark");
+  });
+
+
+
+</script>
+
+</body>
+</html>

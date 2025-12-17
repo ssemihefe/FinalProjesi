@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Market Sitesi - Sepetim</title>
+
+  <link rel="stylesheet" href="style2deneme.css">
+    <script>
+    function AdetAzaltma(id){
+      var z = document.getElementById(id);  
+      var mevcutsayi = Number(z.value);
+      
+      if(mevcutsayi > 1)
+    { z.value = mevcutsayi-1;}
+      
+    }
+    function AdetArtirma(id){
+      var z = document.getElementById(id);
+      var mevcutsayi = Number(z.value);
+      if(mevcutsayi < 10)
+    { z.value = mevcutsayi+1;}
+     
+    }
+    document.addEventListener("DOMContentLoaded", () => {
+    const mobileMenu = document.getElementById("mobileMenu");
+    const navBar = document.querySelector(".nav-bar");
+
+    navBar.addEventListener("click", () => {
+      mobileMenu.classList.toggle("open");
+  });
+});
+
+  </script>
+</head>
+<body>
+
+  <!-- === SIDE MENÜ === -->
+  <div class="side-menu1">
+    <h2> <a href="Anasayfa.html"><img src="img/WebSayfası/LogoDeneme1.png" alt=""> </a></h2>
+    <Button><a href="#">Meyve</a> </Button>
+    <button href="#"><a href="">Sebze</a> </button>
+    <button href="#"><a href="">İçecek</a> </button>
+    <button href="#"><a href="">Atıştırmalık</a> </button>
+    <button href="#"><a href=""> Temizlik   </a> </button>
+    <button href="#"><a href=""> Şarküteri  </a> </button>
+    <button href="#"><a href=""> Deniz Ürünleri   </a> </button>
+    <button href="#"><a href=""> Dondurulmuş Ürünler   </a> </button>
+    <button href="#"><a href=""> Giyim   </a> </button>
+    <button href="#"><a href=""> Elektronik   </a> </button>
+    <button href="#"><a href=""> Unlu Mamüller   </a> </button>
+    <button href="#"><a href=""> Kozmetik ve Kişisel Bakım   </a> </button>
+    <button href="#"><a href=""> Süt ve Süt Ürünleri   </a> </button>
+    <button href="#"><a href=""> Bebek   </a> </button>
+  </div>
+
+  <!-- === Body arkasındaki kutu === -->
+    <div class="mainbolge">
+    <!-- === NAV-BAR Mobil sürümde burası sadece logo ve 3 çizgi şeklinde aşağı kayan bir menü eklemeliyiz. === -->
+    <div class="nav-bar">
+      <button href="Anasayfa.html"> <a href="Anasayfa.html">Ana Sayfa</a> </button>
+      <button href="sepetim.html"><a href="sepetim.html">Sepetim</a> </button>
+      <button><a href="#">Kaynakça</a> </button>
+      <button><a href="#">Giriş yap / Üye Ol </a> </button>
+      
+      
+    </div>
+
+    <!-- Logo marketim ile yer değiştirecek. (Yapıldı.) -->
+
+    <div class="mobile-menu" id="mobileMenu">
+    <h3>Kategoriler</h3>
+    <button>Meyve</button>
+    <button>Sebze</button>
+    <button>İçecek</button>
+    <button>Atıştırmalık</button>
+    <button>Temizlik</button>
+    <button>Şarküteri</button>
+    <button>Deniz Ürünleri</button>
+    <button>Dondurulmuş Ürünler</button>
+    <button>Giyim</button>
+    <button>Elektronik</button>
+    <button>Unlu Mamüller</button>
+    <button>Kozmetik</button>
+    <button>Süt Ürünleri</button>
+    <button>Bebek</button>
+    </div>
+
+    <!-- === KART 1 1.satır === -->
+    <div class="sepetim-kutusu">
+  <legend>
+    <h1>Aldığınız Ürünler</h1>
+
+    <div class="sepetim-ickutusu">
+
+      <!-- ÜRÜN SATIRI -->
+      <div class="urun-satir">
+
+        <!-- 1: Resim -->
+        <img src="img/WebSayfası/LogoDeneme1.png" alt="">
+
+        <!-- 2: Ürün adı ve açıklama -->
+        <div class="urun-bilgi">
+          <h6>Ürün Adı</h6>
+          <p>Ürün açıklaması buraya gelecek...</p>
+        </div>
+
+        <!-- 3: Kilo/Fiyat alanı (şimdilik boş) -->
+        <div class="urun-fiyat">
+          <!-- JS ile sen dolduracaksın -->
+        </div>
+
+        <!-- 4: En sağ kutu (şimdilik boş, içi ortalansın) -->
+        <div class="urun-ekstra">
+          <!-- İçine ne koyarsan ortada duracak -->
+        </div>
+
+      </div>
+
+    </div>
+  </legend>
+</div>
+
+
+
+
+    
+
+
+
+      
+    </div>
+  </div>
+
+</body>
+</html>
