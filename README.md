@@ -13,3 +13,5 @@ Drive olarak paylaşmaktayız: https://drive.google.com/file/d/1Wk3COE-POV4l_gtI
 14.Zip: https://drive.google.com/drive/folders/1F3E6ZV3f7h5WhJY5o1f1bl0TqbFyzxY3?usp=sharing
 
 15.Zip: https://drive.google.com/drive/folders/1r2It7oSRNJX9mPLvOp0L9kIlVihakgXY?usp=sharing
+
+Son Sürüm Zip: https://drive.google.com/file/d/1AgyTatMTpmahl67S7jpUmcKCqHwMrQhR/view?usp=sharing
